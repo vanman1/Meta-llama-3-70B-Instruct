@@ -1,1 +1,1 @@
-# Meta-llama-3-70B-Instruct
+# Meta-llama 70B-Instruct
