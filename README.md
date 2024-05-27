@@ -2,6 +2,10 @@
 - This repo will guide you through the process of running Meta-llama 3 70B on Akash Network.
 - Need Access to the meta llama models on your huggingface account.
 - Apply for Access permission from the authors
+
+# Guide on how to deploy llama to Akask network
+- Follow the below step by step process or check this [youtube](https://youtu.be/MjKLa3hYznA) tutorial
+#
 - Create an acces key to access the models
 - First Create a Keplr wallet account
 - Fund the wallet with AKT tokens
