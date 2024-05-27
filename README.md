@@ -6,7 +6,7 @@
 - First Create a Keplr wallet account
 - Fund the wallet with AKT tokens
 - Minimum of 0.5 AKT is required for deployments
-- Go to [console](https://console.akash.network/).
+- Go to [Akash console](https://console.akash.network/).
 - Login with keplr wallet
 - Approve the sign in transaction
 - Go to Deployments
