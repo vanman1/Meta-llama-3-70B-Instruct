@@ -21,4 +21,13 @@
 - Wait for a while for the models to be downloaded
 - After the model is downloaded you can now access your Llama 3 70B endpoint  by clicking on "Forwarded Port" on the "Leases" tab.
 - Use that ENDPOINT in your API Code to interact with the model
-- Use This Code
+
+# Testing The Model Deployment
+
+- First, ensure you have the requests library installed. If you don't have it installed yet, you can install it via pip
+- ```
+  pip install requests
+  ```
+- Now use the api request from [app.py](https://github.com/vanman1/Meta-llama-3-70B-Instruct/blob/main/app.py)
+- Run it in your terminal to see the response
+- Change the user message to chat with the llama model running on akash.
