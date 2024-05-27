@@ -1,0 +1,64 @@
+---
+version: "2.0"
+services:
+  vllm:
+    image: zjuuu/vllm:7be4f56
+    expose:
+      - port: 8000
+        as: 80
+        to:
+          - global: true
+    command:
+      - bash
+      - "-c"
+    args:
+      - >-
+        python3 -m vllm.entrypoints.openai.api_server --model
+        meta-llama/Meta-Llama-3-70B-Instruct --tensor-parallel-size 2 --gpu-memory-utilization 0.99
+    env:
+      - "HF_TOKEN=hf_yourtoken" #https://huggingface.co/docs/hub/security-tokens
+    params:
+      storage:
+        shm:
+          mount: /dev/shm
+        data:
+          mount: /root/.cache
+          readOnly: false
+profiles:
+  compute:
+    vllm:
+      resources:
+        cpu:
+          units: 48
+        memory:
+          size: 64Gi
+        storage:
+          - size: 50Gi
+          - name: data
+            size: 200Gi
+            attributes:
+              persistent: true
+              class: beta3
+          - name: shm
+            size: 10Gi
+            attributes:
+              class: ram
+              persistent: false
+        gpu:
+          units: 2
+          attributes:
+            vendor:
+              nvidia:
+                - model: a100
+                  ram: 80Gi
+  placement:
+    dcloud:
+      pricing:
+        vllm:
+          denom: uakt
+          amount: 1000
+deployment:
+  vllm:
+    dcloud:
+      profile: vllm
+      count: 1
