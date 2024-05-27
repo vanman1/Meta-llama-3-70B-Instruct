@@ -29,5 +29,6 @@
   pip install requests
   ```
 - Now use the api request from [app.py](https://github.com/vanman1/Meta-llama-3-70B-Instruct/blob/main/app.py)
+- Replace `api.example.com` with the url you get in leases tab
 - Run it in your terminal to see the response
 - Change the user message to chat with the llama model running on akash.
