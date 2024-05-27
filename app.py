@@ -1,7 +1,7 @@
 import requests
 
 # Define the API endpoint
-API_URL = "https://api.example.com/v1/chat/completions"  # Replace with the actual URL you get from the leases tab
+API_URL = "http://api.example.com/v1/chat/completions"  # Replace with the actual URL you get from the leases tab
 
 
 # Define the headers
