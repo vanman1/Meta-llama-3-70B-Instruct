@@ -6,4 +6,8 @@
 - Go to [console](https://console.akash.network/).
 - Login with keplr wallet
 - Approve the sign in transaction
-- 
+- Go to Deployments
+- Click `Build Your Template`
+- Name your deployment(Optional)
+- Go to yaml editor
+- Paste the SDL From [SDL]
